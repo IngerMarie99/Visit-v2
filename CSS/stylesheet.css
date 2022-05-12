@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--white);
+    border-radius: 15px;
+    z-index: 10;
+    position: absolute;
+    margin: 10px 30%;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+    width: 90vw;
+    padding-top: 200px;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+}
+
+
+
+.menuItem a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 28px;
+    padding-left: 46px;
+    text-transform: uppercase;
+
+}
+
+
+.hamburger{
+    position: fixed;
+    z-index: 100;
+    top: 25px;
+    left: 26px;
+    padding: 4px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.closeIcon {
+    display: none;
+}
+
+.aktiviteter_container {
+    padding-top: 60px;
+}
+.aktiviteter_container h2 {
+    padding-left: 46px;
+}
+
+.first_container {
+    padding-top: 40px;
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding-top: 10px;
+    padding-inline-start: 46px;
+
+}
+
+.card {
+    width: 35vw;
+    background-color: var(--primary300);
+    height: 190px;
+    border-radius: 15px;
+}
+
+.card img {
+    height: 120px;
+    width: 35vw;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card h3 {
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card_action {
+    width: 35vw;
+    background-color: var(--primary300);
+    height: 190px;
+    border-radius: 15px;
+}
+
+.card_action img {
+    height: 120px;
+    width: 35vw;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card_action h3 {
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+
+#map {
+    height: 100vh;
+    width: 100vw;
+}
+
+.marker {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 56px;
+    background-image: url(../Assets/bikePosition.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.marker_active{
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    width: 53px;
+    height: 73.46px;
+    background-image: url(../Assets/bikePositionActive.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.bikeInfo {
+    background-color: var(--white);
+    color: var(--black);
+    width: 100vw;
+    height: 250px;
+    border-radius: 15px 15px 0px 0px;
+    bottom: 0px;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.bikeInfo-close {
+    justify-content: right;
+    width: 30px;
+    align-self: flex-end;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.availability {
+    padding-top: 35px;
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.availability2 {
+    padding-top: 12px;
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+.hidden {
+    display: none;
+}
