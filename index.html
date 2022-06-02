@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/root.css">
     <link rel="stylesheet" href="./CSS/stylesheet.css">
+    <link rel="stylesheet" href="./CSS/mapbox-gl-geocoder.css" type="text/css">
+
 
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     
     <script type="module" src="./JS/app.js"></script>
 </head>
@@ -29,6 +32,9 @@
         <div id="date">placeholder</div>
     </div>
 
+
+    <button id="fly"></button>
+    
     <main id="map"></main>
 
     <div class="bikeInfo hidden">
@@ -44,6 +50,8 @@
             <p class="capacity">12</p> <p>tilgjengelige plasser</p>
         </div>
     </div>
+
+
     
 
     

@@ -11,8 +11,26 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     background-color: var(--white);
+    color: var(--black);
+    padding: 5px 30px 5px 30px;
+    border-radius: 15px;
+    z-index: 10;
+    position: absolute;
+    margin: 10px 30%;
+}
+
+
+#container_dark {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 5px 30px 5px 30px;
     border-radius: 15px;
     z-index: 10;
     position: absolute;
@@ -76,6 +94,11 @@ body {
     padding-top: 40px;
 }
 
+.first_container_events {
+    padding-top: 40px;
+    color: var(--white);
+}
+
 .scroll-container {
     display: flex;
     flex-wrap: nowrap;
@@ -105,6 +128,36 @@ body {
     padding-top: 3px;
 }
 
+.card_event {
+    width: 70vw;
+    background-color: var(--white);
+    height: 190px;
+    border-radius: 15px;
+    color: var(--black);
+}
+
+
+
+.card_event img {
+    height: 120px;
+    width: 70vw;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card_event h3 {
+    padding-left: 10px;
+    padding-top: 3px;
+    color: var(--black);
+}
+
+.card_event h4 {
+    padding-left: 10px;
+    padding-top: 3px;
+    color: var(--primary400);
+    font-size: 12px;
+    font-weight: 400;
+}
 
 
 h2 {
@@ -209,4 +262,26 @@ h3 {
 
 .hidden {
     display: none;
+}
+
+#fly {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 92.5vh 85vw;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    background-image: url(/Assets/flytoMyLocation.svg);
+    background-color: transparent;
+    z-index: 50;
+    }
+
+#ticketmaster {
+    background-color: beige;
+    color: black;
 }

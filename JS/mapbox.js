@@ -80,8 +80,37 @@ export async function getMap() {
         .setLngLat(station.geometry.coordinates)
         .addTo(map);
     });
+
+    //Her ligger geolocation
+    navigator.geolocation.getCurrentPosition(position => {
+        console.log(position);
+
+        new mapboxgl.Marker({color:'var(--primary300)'})
+        .setLngLat([position.coords.longitude,position.coords.latitude])
+        .addTo(map)
+
+        map.flyTo({
+            center: [position.coords.longitude,position.coords.latitude],
+            zoom:15,
+            essential:true
+        })
+        
+        //Her ligger fly to knappen sin funksjon
+        document.getElementById('fly').addEventListener('click', () => {
+            map.flyTo({
+                center: [position.coords.longitude,position.coords.latitude],
+                zoom:15,
+                essential:true
+            });
+        })
+    });
+    
 };
 
+
+
+
+//Her er sykkel popupene
 function popUpMessage(station, address, bikes, docks, lat, lon, map) {
     const bikeContainerEl= document.querySelector('.bikeInfo');
     const allMarkers =document.querySelectorAll('.marker');
@@ -133,3 +162,5 @@ async function getCapacity() {
     const capacity = await response.json();
     return capacity.data.stations;
 }
+
+
