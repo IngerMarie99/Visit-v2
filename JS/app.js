@@ -2,11 +2,12 @@ import { getTime } from "./getTime.js";
 import {hamburgerMenu} from "./hamburgerMenu.js";
 import {getMap} from "./mapbox.js";
 import { getEvents } from  "./ticketmaster.js";
-import {activities} from "./activities.js";
+import { activities, getActivities} from "./activities.js";
 getTime();
 hamburgerMenu();
 getMap();
 getEvents();
+getActivities();
 console.log (activities);
 
 // SERVICE WORKER with errors

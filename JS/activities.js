@@ -40,7 +40,8 @@ export const activities = [
         adress: 'Kirkegata 20, 0153 Oslo',
         lat: 59.9107759,
         lon: 10.7444445,
-        info: 'The Escape Game offers immersive rooms where individuals can experience 60-minute adventures. Think you can escape the room? Find an escape game near you!'
+        info: 'The Escape Game offers immersive rooms where individuals can experience 60-minute adventures. Think you can escape the room? Find an escape game near you!',
+        url: "https://www.escapegames.no/images/games/game-steam-big.jpg"
     },
 
     {
@@ -50,7 +51,8 @@ export const activities = [
         adress: 'Edvard Munchs Plass 1, 0194 Oslo',
         lat: 59.9061668,
         lon: 10.7554186,
-        info: 'Et levende kunstmuseum skreddersydd for store opplevelser. Opplev Edvard Munch, internasjonale utstillinger og samtidskunst, i tillegg til musikk!'
+        info: 'Et levende kunstmuseum skreddersydd for store opplevelser. Opplev Edvard Munch, internasjonale utstillinger og samtidskunst, i tillegg til musikk!',
+        url: "https://upload.wikimedia.org/wikipedia/commons/5/56/MUNCH_Museum_front_%282020%29_4.jpg"
     },
 
     {
@@ -60,7 +62,8 @@ export const activities = [
         adress: 'Kjelsåsveien 143, 0491 Oslo',
         lat: 59.966424,
         lon: 10.7827069,
-        info: 'Norsk Teknisk Museum forvalter samlinger fra et bredt spekter av norsk og internasjonal industri, kommunikasjon, vitenskap og medisin.'
+        info: 'Norsk Teknisk Museum forvalter samlinger fra et bredt spekter av norsk og internasjonal industri, kommunikasjon, vitenskap og medisin.',
+        url: "https://res.cloudinary.com/dm1881/image/upload/a_ignore,c_lpad,w_980/v1544090987/bzzwhjrvcwwdypldsihs.jpg"
     },
 
     {
@@ -70,7 +73,8 @@ export const activities = [
         adress: 'Vitaminveien 7-9, 0485 Oslo',
         lat: 59.9468383789063,
         lon: 10.7753944396973,
-        info:'130 butikker, spisesteder og tjenester. Velkommen til oss. Se kampanjer, tilbud og oversikt over alle butikker og spisesteder. Åpent 10-21. Stort Parkeringshus. Gratis WIFI. Inspirasjon.'
+        info:'130 butikker, spisesteder og tjenester. Velkommen til oss. Se kampanjer, tilbud og oversikt over alle butikker og spisesteder. Åpent 10-21. Stort Parkeringshus. Gratis WIFI. Inspirasjon.',
+        url: "https://tellusdmsmedia.newmindmedia.com/wsimgs/Storo-Storsenter_sykkelparkering_1779198964.jpg[ProductImage]"
     },
     {
         category: 'Shopping',
@@ -79,30 +83,32 @@ export const activities = [
         adress: 'Lilleakerveien 16, 0283 Oslo',
         lat: 59.9174041748047,
         lon: 10.6360511779785,
-        info:'CC Vest er et kjøpesenter på Lilleaker i Oslo. Det har et bredt utvalg av butikker, 90 totalt, i tillegg til tjenester som helsehjørne, dyrlege og mer.'
+        info:'CC Vest er et kjøpesenter på Lilleaker i Oslo. Det har et bredt utvalg av butikker, 90 totalt, i tillegg til tjenester som helsehjørne, dyrlege og mer.',
+        url: "https://upload.wikimedia.org/wikipedia/commons/7/76/CC_Vest_%28august_2019%29.jpg"
     },
 ]
 console.log(activities)
 
-activities.forEach(activity => {
+export function getActivities() {
 
-})
+    console.log('get activities')
+    const activitiesCard = document.getElementById("activities");
 
-activities.forEach(activity => {
-    const activityCard = document.createElement('div');
-    activityCard.classList.add('card');
-    const activityCover = document.createElement('img');
-    activityCover.setAttribute('src', activities.image.url);
-    activityCard.append(activityCover);
+    activities.forEach(activity => {
+        const activityCard = document.createElement('div');
+        activityCard.classList.add('card');
+        const activityCover = document.createElement('img');
+        activityCover.setAttribute('src', activity.url);
+        activityCard.append(activityCover);
 
-    const activityCategory = document.createElement('h4');
-    activityCategory.textContent = event.classifications[0].subGenre.name;
-    activityCard.append(activityCategory);
-    const activityName = document.createElement('h3');
-    activityName.textContent = event.name;
-    activityCard.append(eventName);
+        const activityCategory = document.createElement('h4');
+        activityCategory.textContent = activity.category;
+        activityCard.append(activityCategory);
+        const activityName = document.createElement('h3');
+        activityName.textContent = activity.name;
+        activityCard.append(activityName);
+        activitiesCard.append(activityCard)
+    });
 
-    const eventsMusic = document.querySelector('.events-music');
-    eventsMusic.append(eventCard)
-});
+}
 
